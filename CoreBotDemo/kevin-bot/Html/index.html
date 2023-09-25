@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script crossorigin="anonymous" src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+    <style>
+        #contenedor {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+            #contenedor > div {
+                width: 40%;
+                margin-right: 10%;
+            }
+
+
+        #webchat {
+            height: 100%;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="contenedor">
+        <div>
+            <p style="font-size:larger; font-weight:bold; text-align:center">Web Chat</p>
+            <iframe src='https://webchat.botframework.com/embed/kevin-botazure?s=4KP-BHqVqwc.RX0izcs3Y6ycIogLh2phTbhRAe7onu-5DlbaWIV9mY0' style='min-width: 400px; width: 100%; min-height: 500px;'></iframe>
+        </div>
+        <div>
+            <p>Direct Line</p>
+            <div id="webchat" role="main"></div>
+            <div id="webchat"></div>
+            <script>
+                (async function () {
+                    const res = await fetch('https://kevin-bot.azurewebsites.net/directline/token', { method: 'POST' });
+                    const { token } = await res.json();
+                    const store = window.WebChat.createStore({}, ({ dispatch }) => next => action => {
+                        if (action.type === 'DIRECT_LINE/CONNECT_FULFILLED') {
+                            dispatch({
+                                type: 'WEB_CHAT/SEND_EVENT',
+                                payload: {
+                                    name: 'webchat/join',
+                                    value: { language: window.navigator.language }
+                                }
+                            });
+                        }
+
+                        return next(action);
+                    });
+
+                    window.WebChat.renderWebChat(
+                        {
+                            directLine: window.WebChat.createDirectLine({ token }),
+                            store
+                        },
+                        document.getElementById('webchat')
+                    );
+
+                    document.querySelector('#webchat > *').focus();
+                })().catch(err => console.error(err));
+            </script>
+        </div>
+    </div>
+
+</body>
+</html>
