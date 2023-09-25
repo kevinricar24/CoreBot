@@ -3,26 +3,26 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "groupName": {
-      "value": ""
+      "value": "CoreBot-groupName"
     },
     "groupLocation": {
-      "value": ""
+      "value": "eastus"
     },
     "appServiceName": {
-      "value": ""
+      "value": "CoreBot"
     },
     "appServicePlanName": {
-      "value": ""
+      "value": "CoreBot-appserviceplan"
     },
     "appServicePlanLocation": {
-      "value": ""
+      "value": "eastus"
     },
     "appServicePlanSku": {
       "value": {
-        "name": "S1",
-        "tier": "Standard",
-        "size": "S1",
-        "family": "S",
+        "name": "F1",
+        "tier": "Free",
+        "size": "F1",
+        "family": "F",
         "capacity": 1
       }
     },
@@ -30,10 +30,10 @@
       "value": "MultiTenant"
     },
     "appId": {
-      "value": ""
+      "value": "21885d5a-1e11-4f45-bbcd-b1d069dab5cf"
     },
     "appSecret": {
-      "value": ""
+      "value": "f3ed88f3-ccf7-448c-bf39-2e33b066740f"
     },
     "UMSIName": {
       "value": ""

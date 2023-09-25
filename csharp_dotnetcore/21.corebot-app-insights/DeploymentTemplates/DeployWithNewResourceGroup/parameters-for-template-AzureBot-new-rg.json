@@ -3,16 +3,16 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "groupName": {
-      "value": ""
+      "value": "CoreBot-groupName"
     },
     "groupLocation": {
-      "value": ""
+      "value": "eastus"
     },
     "azureBotId": {
-      "value": ""
+      "value": "CoreBot-myBot"
     },
     "azureBotSku": {
-      "value": "S1"
+      "value": "F0"
     },
     "azureBotRegion": {
       "value": "global"
@@ -24,7 +24,7 @@
       "value": "MultiTenant"
     },
     "appId": {
-      "value": ""
+      "value": "21885d5a-1e11-4f45-bbcd-b1d069dab5cf"
     },
     "UMSIName": {
       "value": ""

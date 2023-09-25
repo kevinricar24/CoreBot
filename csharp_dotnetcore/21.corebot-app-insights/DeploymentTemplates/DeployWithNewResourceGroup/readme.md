@@ -4,7 +4,12 @@ The BotApp must be deployed prior to AzureBot.
 Command line:
 - az login
 - az deployment sub create --template-file <template-file> --location <bot-region> --parameters @<parameters-file>
+- az deployment sub create --template-file template-BotApp-new-rg.json --location eastus --parameters parameters-for-template-BotApp-new-rg.json
+- 
 
+- az deployment sub create --template-file template-BotApp-new-rg.json --location eastus --parameters parameters-for-template-BotApp-new-rg.json
+- az deployment sub create --template-file template-AzureBot-new-rg.json --location eastus --parameters parameters-for-template-AzureBot-new-rg.json
+- 
 # parameters-for-template-BotApp-new-rg:
 
 - **groupName**:(required)                Specifies the name of the new Resource Group.
@@ -24,7 +29,7 @@ Command line:
 
 MoreInfo: https://docs.microsoft.com/en-us/azure/bot-service/tutorial-provision-a-bot?view=azure-bot-service-4.0&tabs=userassigned%2Cnewgroup#create-an-identity-resource
 
-
+- az deployment sub create --template-file template-AzureBot-new-rg.json --location eastus --parameters parameters-for-template-AzureBot-new-rg.json
 
 # parameters-for-template-AzureBot-new-rg:
 
