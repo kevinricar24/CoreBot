@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "groupName": {
+      "value": "corebotdemo-group"
+    },
+    "groupLocation": {
+      "value": "eastus"
+    },
+    "azureBotId": {
+      "value": "corebotdemo-bot"
+    },
+    "azureBotSku": {
+      "value": "F0"
+    },
+    "azureBotRegion": {
+      "value": "global"
+    },
+    "botEndpoint": {
+      "value": ""
+    },
+    "appType": {
+      "value": "UserAssignedMSI"
+    },
+    "appId": {
+      "value": "889c9e8e-6047-455a-867c-10a74c74778a"
+    },
+    "UMSIName": {
+      "value": "corebot-identity"
+    },
+    "UMSIResourceGroupName": {
+      "value": "corebotdemo-group"
+    },
+    "tenantId": {
+      "value": ""
+    }
+  }
+}
